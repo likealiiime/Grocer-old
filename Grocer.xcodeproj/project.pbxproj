@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A725053A133538DD00162C2D /* ListViewTableCellBackgroundHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7250539133538DD00162C2D /* ListViewTableCellBackgroundHighlight@2x.png */; };
+		A725053E1335697900162C2D /* FoodName.m in Sources */ = {isa = PBXBuildFile; fileRef = A725053D1335697900162C2D /* FoodName.m */; };
+		A7351D501313584600885DFE /* Fruits Root View@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7351D4E1313584600885DFE /* Fruits Root View@2x.png */; };
+		A7351D531313584F00885DFE /* Root View Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7351D521313584F00885DFE /* Root View Background@2x.png */; };
+		A7351D5913135FE700885DFE /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7351D5713135FE700885DFE /* ListViewController.m */; };
+		A7351D5A13135FE700885DFE /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7351D5813135FE700885DFE /* ListViewController.xib */; };
+		A7351D931313632900885DFE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7351D921313632900885DFE /* CoreData.framework */; };
+		A7351DAE1314B6C600885DFE /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A7351DA81314B6C600885DFE /* FMDatabase.m */; };
+		A7351DAF1314B6C600885DFE /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7351DAA1314B6C600885DFE /* FMDatabaseAdditions.m */; };
+		A7351DB11314B6C600885DFE /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A7351DAD1314B6C600885DFE /* FMResultSet.m */; };
+		A7351DBB1314B74E00885DFE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7351DBA1314B74D00885DFE /* libsqlite3.dylib */; };
+		A7351DBD1314BE8900885DFE /* Grocer.db in Resources */ = {isa = PBXBuildFile; fileRef = A7351DBC1314BE8900885DFE /* Grocer.db */; };
+		A7351DBF131B473800885DFE /* Vegetables Root View@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7351DBE131B473800885DFE /* Vegetables Root View@2x.png */; };
+		A7351DC1131B550E00885DFE /* ListViewTableCellBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7351DC0131B550E00885DFE /* ListViewTableCellBackground@2x.png */; };
+		A7351DCC131CA11600885DFE /* ListViewUINavigationBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7351DCB131CA11600885DFE /* ListViewUINavigationBar@2x.png */; };
+		A7351DD7131CA2FF00885DFE /* CustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7351DD6131CA2F200885DFE /* CustomNavigationBar.m */; };
+		A79085D3131CA78B00D6EE06 /* ListViewNavigationBarOverhang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A79085D2131CA78B00D6EE06 /* ListViewNavigationBarOverhang@2x.png */; };
+		A79085D51324879000D6EE06 /* ListViewBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A79085D41324879000D6EE06 /* ListViewBackground@2x.png */; };
+		A79085D71325BCD100D6EE06 /* Sketchetik.otf in Resources */ = {isa = PBXBuildFile; fileRef = A79085D61325BCD100D6EE06 /* Sketchetik.otf */; };
+		A79085D91325BEE600D6EE06 /* MoanHand.otf in Resources */ = {isa = PBXBuildFile; fileRef = A79085D81325BEE600D6EE06 /* MoanHand.otf */; };
+		A79E2BA513B2D47B0061E6F3 /* SearchViewBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A79E2BA413B2D47B0061E6F3 /* SearchViewBackground@2x.png */; };
+		A79E2BAA13B2D7EE0061E6F3 /* SearchViewSearchBarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A79E2BA913B2D7EE0061E6F3 /* SearchViewSearchBarBackground@2x.png */; };
+		A79E2BAC13B2FBEA0061E6F3 /* SearchViewTableCellBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A79E2BAB13B2FBEA0061E6F3 /* SearchViewTableCellBackground@2x.png */; };
+		A79E2BAE13B2FCD20061E6F3 /* SearchViewTableCellBackgroundHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A79E2BAD13B2FCD20061E6F3 /* SearchViewTableCellBackgroundHighlight@2x.png */; };
+		A7B5832B13A42E5B00D72D72 /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B5832913A42E5A00D72D72 /* FoodViewController.m */; };
+		A7B5832C13A42E5B00D72D72 /* FoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B5832A13A42E5A00D72D72 /* FoodViewController.xib */; };
+		A7B5833113A43BE800D72D72 /* FoodViewBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B5832F13A43BE800D72D72 /* FoodViewBackButton@2x.png */; };
+		A7B5833213A43BE800D72D72 /* FoodViewBackButtonTouched@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B5833013A43BE800D72D72 /* FoodViewBackButtonTouched@2x.png */; };
+		A7B5833413A43D8400D72D72 /* FoodViewUpperBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B5833313A43D8400D72D72 /* FoodViewUpperBackground@2x.png */; };
+		A7B5833613A451ED00D72D72 /* FoodViewLowerBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B5833513A451ED00D72D72 /* FoodViewLowerBackground@2x.png */; };
+		A7F01EBE1313506B00EB1F22 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F01EBD1313506B00EB1F22 /* UIKit.framework */; };
+		A7F01EC01313506B00EB1F22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F01EBF1313506B00EB1F22 /* Foundation.framework */; };
+		A7F01EC21313506B00EB1F22 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F01EC11313506B00EB1F22 /* CoreGraphics.framework */; };
+		A7F01EC81313506C00EB1F22 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7F01EC61313506C00EB1F22 /* InfoPlist.strings */; };
+		A7F01ECB1313506C00EB1F22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F01ECA1313506C00EB1F22 /* main.m */; };
+		A7F01ECE1313506C00EB1F22 /* GrocerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F01ECD1313506C00EB1F22 /* GrocerAppDelegate.m */; };
+		A7F01ED11313506D00EB1F22 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F01ECF1313506D00EB1F22 /* MainWindow.xib */; };
+		A7F01ED41313506D00EB1F22 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F01ED31313506D00EB1F22 /* RootViewController.m */; };
+		A7F01ED71313506D00EB1F22 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F01ED51313506D00EB1F22 /* RootViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A7250539133538DD00162C2D /* ListViewTableCellBackgroundHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ListViewTableCellBackgroundHighlight@2x.png"; sourceTree = "<group>"; };
+		A725053C1335697800162C2D /* FoodName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodName.h; sourceTree = "<group>"; };
+		A725053D1335697900162C2D /* FoodName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodName.m; sourceTree = "<group>"; };
+		A7351D4E1313584600885DFE /* Fruits Root View@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fruits Root View@2x.png"; sourceTree = "<group>"; };
+		A7351D521313584F00885DFE /* Root View Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Root View Background@2x.png"; sourceTree = "<group>"; };
+		A7351D5613135FE700885DFE /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		A7351D5713135FE700885DFE /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		A7351D5813135FE700885DFE /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		A7351D921313632900885DFE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A7351DA71314B6C600885DFE /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		A7351DA81314B6C600885DFE /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		A7351DA91314B6C600885DFE /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		A7351DAA1314B6C600885DFE /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		A7351DAB1314B6C600885DFE /* fmdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fmdb.m; sourceTree = "<group>"; };
+		A7351DAC1314B6C600885DFE /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		A7351DAD1314B6C600885DFE /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		A7351DBA1314B74D00885DFE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		A7351DBC1314BE8900885DFE /* Grocer.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Grocer.db; sourceTree = "<group>"; };
+		A7351DBE131B473800885DFE /* Vegetables Root View@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Vegetables Root View@2x.png"; sourceTree = "<group>"; };
+		A7351DC0131B550E00885DFE /* ListViewTableCellBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ListViewTableCellBackground@2x.png"; sourceTree = "<group>"; };
+		A7351DCB131CA11600885DFE /* ListViewUINavigationBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ListViewUINavigationBar@2x.png"; sourceTree = "<group>"; };
+		A7351DD5131CA2EC00885DFE /* CustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationBar.h; sourceTree = "<group>"; };
+		A7351DD6131CA2F200885DFE /* CustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationBar.m; sourceTree = "<group>"; };
+		A79085D2131CA78B00D6EE06 /* ListViewNavigationBarOverhang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ListViewNavigationBarOverhang@2x.png"; sourceTree = "<group>"; };
+		A79085D41324879000D6EE06 /* ListViewBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ListViewBackground@2x.png"; sourceTree = "<group>"; };
+		A79085D61325BCD100D6EE06 /* Sketchetik.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sketchetik.otf; sourceTree = "<group>"; };
+		A79085D81325BEE600D6EE06 /* MoanHand.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoanHand.otf; sourceTree = "<group>"; };
+		A79E2BA413B2D47B0061E6F3 /* SearchViewBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SearchViewBackground@2x.png"; sourceTree = "<group>"; };
+		A79E2BA913B2D7EE0061E6F3 /* SearchViewSearchBarBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SearchViewSearchBarBackground@2x.png"; sourceTree = "<group>"; };
+		A79E2BAB13B2FBEA0061E6F3 /* SearchViewTableCellBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SearchViewTableCellBackground@2x.png"; sourceTree = "<group>"; };
+		A79E2BAD13B2FCD20061E6F3 /* SearchViewTableCellBackgroundHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SearchViewTableCellBackgroundHighlight@2x.png"; sourceTree = "<group>"; };
+		A7B5832813A42E5A00D72D72 /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
+		A7B5832913A42E5A00D72D72 /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
+		A7B5832A13A42E5A00D72D72 /* FoodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodViewController.xib; sourceTree = "<group>"; };
+		A7B5832F13A43BE800D72D72 /* FoodViewBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FoodViewBackButton@2x.png"; sourceTree = "<group>"; };
+		A7B5833013A43BE800D72D72 /* FoodViewBackButtonTouched@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FoodViewBackButtonTouched@2x.png"; sourceTree = "<group>"; };
+		A7B5833313A43D8400D72D72 /* FoodViewUpperBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FoodViewUpperBackground@2x.png"; sourceTree = "<group>"; };
+		A7B5833513A451ED00D72D72 /* FoodViewLowerBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FoodViewLowerBackground@2x.png"; sourceTree = "<group>"; };
+		A7F01EB91313506B00EB1F22 /* Grocer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grocer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F01EBD1313506B00EB1F22 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A7F01EBF1313506B00EB1F22 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A7F01EC11313506B00EB1F22 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A7F01EC51313506C00EB1F22 /* Grocer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Grocer-Info.plist"; sourceTree = "<group>"; };
+		A7F01EC71313506C00EB1F22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A7F01EC91313506C00EB1F22 /* Grocer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Grocer-Prefix.pch"; sourceTree = "<group>"; };
+		A7F01ECA1313506C00EB1F22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A7F01ECC1313506C00EB1F22 /* GrocerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GrocerAppDelegate.h; sourceTree = "<group>"; };
+		A7F01ECD1313506C00EB1F22 /* GrocerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrocerAppDelegate.m; sourceTree = "<group>"; };
+		A7F01ED01313506D00EB1F22 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		A7F01ED21313506D00EB1F22 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		A7F01ED31313506D00EB1F22 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		A7F01ED61313506D00EB1F22 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7F01EB61313506B00EB1F22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7F01EBE1313506B00EB1F22 /* UIKit.framework in Frameworks */,
+				A7F01EC01313506B00EB1F22 /* Foundation.framework in Frameworks */,
+				A7F01EC21313506B00EB1F22 /* CoreGraphics.framework in Frameworks */,
+				A7351D931313632900885DFE /* CoreData.framework in Frameworks */,
+				A7351DBB1314B74E00885DFE /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7351D5413135F4100885DFE /* NIB Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7F01ECF1313506D00EB1F22 /* MainWindow.xib */,
+				A7F01ED51313506D00EB1F22 /* RootViewController.xib */,
+				A7351D5813135FE700885DFE /* ListViewController.xib */,
+				A7B5832A13A42E5A00D72D72 /* FoodViewController.xib */,
+			);
+			name = "NIB Files";
+			sourceTree = "<group>";
+		};
+		A7351D5513135F4900885DFE /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7351DD5131CA2EC00885DFE /* CustomNavigationBar.h */,
+				A7351DD6131CA2F200885DFE /* CustomNavigationBar.m */,
+				A7F01ECC1313506C00EB1F22 /* GrocerAppDelegate.h */,
+				A7F01ECD1313506C00EB1F22 /* GrocerAppDelegate.m */,
+				A7F01ED21313506D00EB1F22 /* RootViewController.h */,
+				A7F01ED31313506D00EB1F22 /* RootViewController.m */,
+				A7351D5613135FE700885DFE /* ListViewController.h */,
+				A7351D5713135FE700885DFE /* ListViewController.m */,
+				A7B5832813A42E5A00D72D72 /* FoodViewController.h */,
+				A7B5832913A42E5A00D72D72 /* FoodViewController.m */,
+				A725053C1335697800162C2D /* FoodName.h */,
+				A725053D1335697900162C2D /* FoodName.m */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		A7351DA61314B6C500885DFE /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				A7351DA71314B6C600885DFE /* FMDatabase.h */,
+				A7351DA81314B6C600885DFE /* FMDatabase.m */,
+				A7351DA91314B6C600885DFE /* FMDatabaseAdditions.h */,
+				A7351DAA1314B6C600885DFE /* FMDatabaseAdditions.m */,
+				A7351DAB1314B6C600885DFE /* fmdb.m */,
+				A7351DAC1314B6C600885DFE /* FMResultSet.h */,
+				A7351DAD1314B6C600885DFE /* FMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		A7351DCA131CA10300885DFE /* List View */ = {
+			isa = PBXGroup;
+			children = (
+				A7250539133538DD00162C2D /* ListViewTableCellBackgroundHighlight@2x.png */,
+				A7351DC0131B550E00885DFE /* ListViewTableCellBackground@2x.png */,
+				A7351DCB131CA11600885DFE /* ListViewUINavigationBar@2x.png */,
+				A79085D2131CA78B00D6EE06 /* ListViewNavigationBarOverhang@2x.png */,
+				A79085D41324879000D6EE06 /* ListViewBackground@2x.png */,
+			);
+			name = "List View";
+			sourceTree = "<group>";
+		};
+		A79E2BA213B2D46C0061E6F3 /* Search View */ = {
+			isa = PBXGroup;
+			children = (
+				A79E2BA913B2D7EE0061E6F3 /* SearchViewSearchBarBackground@2x.png */,
+				A79E2BA413B2D47B0061E6F3 /* SearchViewBackground@2x.png */,
+				A79E2BAB13B2FBEA0061E6F3 /* SearchViewTableCellBackground@2x.png */,
+				A79E2BAD13B2FCD20061E6F3 /* SearchViewTableCellBackgroundHighlight@2x.png */,
+			);
+			name = "Search View";
+			sourceTree = "<group>";
+		};
+		A7B5832E13A43A8800D72D72 /* Food View */ = {
+			isa = PBXGroup;
+			children = (
+				A7B5832F13A43BE800D72D72 /* FoodViewBackButton@2x.png */,
+				A7B5833013A43BE800D72D72 /* FoodViewBackButtonTouched@2x.png */,
+				A7B5833313A43D8400D72D72 /* FoodViewUpperBackground@2x.png */,
+				A7B5833513A451ED00D72D72 /* FoodViewLowerBackground@2x.png */,
+			);
+			name = "Food View";
+			sourceTree = "<group>";
+		};
+		A7F01EAE1313506B00EB1F22 = {
+			isa = PBXGroup;
+			children = (
+				A7F01EC31313506C00EB1F22 /* Grocer */,
+				A7F01EBC1313506B00EB1F22 /* Frameworks */,
+				A7F01EBA1313506B00EB1F22 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7F01EBA1313506B00EB1F22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7F01EB91313506B00EB1F22 /* Grocer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7F01EBC1313506B00EB1F22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7351DBA1314B74D00885DFE /* libsqlite3.dylib */,
+				A7F01EBD1313506B00EB1F22 /* UIKit.framework */,
+				A7F01EBF1313506B00EB1F22 /* Foundation.framework */,
+				A7351D921313632900885DFE /* CoreData.framework */,
+				A7F01EC11313506B00EB1F22 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7F01EC31313506C00EB1F22 /* Grocer */ = {
+			isa = PBXGroup;
+			children = (
+				A7351DA61314B6C500885DFE /* FMDB */,
+				A7F01EDD131350D100EB1F22 /* Images */,
+				A7351D5513135F4900885DFE /* Source Files */,
+				A7351D5413135F4100885DFE /* NIB Files */,
+				A7F01EC41313506C00EB1F22 /* Supporting Files */,
+			);
+			path = Grocer;
+			sourceTree = "<group>";
+		};
+		A7F01EC41313506C00EB1F22 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A79085D81325BEE600D6EE06 /* MoanHand.otf */,
+				A79085D61325BCD100D6EE06 /* Sketchetik.otf */,
+				A7351DBC1314BE8900885DFE /* Grocer.db */,
+				A7F01EC51313506C00EB1F22 /* Grocer-Info.plist */,
+				A7F01EC61313506C00EB1F22 /* InfoPlist.strings */,
+				A7F01EC91313506C00EB1F22 /* Grocer-Prefix.pch */,
+				A7F01ECA1313506C00EB1F22 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7F01EDD131350D100EB1F22 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A79E2BA213B2D46C0061E6F3 /* Search View */,
+				A7B5832E13A43A8800D72D72 /* Food View */,
+				A7351DCA131CA10300885DFE /* List View */,
+				A7F01EDE131350D600EB1F22 /* Root View */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		A7F01EDE131350D600EB1F22 /* Root View */ = {
+			isa = PBXGroup;
+			children = (
+				A7351DBE131B473800885DFE /* Vegetables Root View@2x.png */,
+				A7351D521313584F00885DFE /* Root View Background@2x.png */,
+				A7351D4E1313584600885DFE /* Fruits Root View@2x.png */,
+			);
+			name = "Root View";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7F01EB81313506B00EB1F22 /* Grocer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7F01EDA1313506D00EB1F22 /* Build configuration list for PBXNativeTarget "Grocer" */;
+			buildPhases = (
+				A7F01EB51313506B00EB1F22 /* Sources */,
+				A7F01EB61313506B00EB1F22 /* Frameworks */,
+				A7F01EB71313506B00EB1F22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Grocer;
+			productName = Grocer;
+			productReference = A7F01EB91313506B00EB1F22 /* Grocer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7F01EB01313506B00EB1F22 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Soft Illuminations, Inc.";
+			};
+			buildConfigurationList = A7F01EB31313506B00EB1F22 /* Build configuration list for PBXProject "Grocer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A7F01EAE1313506B00EB1F22;
+			productRefGroup = A7F01EBA1313506B00EB1F22 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7F01EB81313506B00EB1F22 /* Grocer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7F01EB71313506B00EB1F22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7F01EC81313506C00EB1F22 /* InfoPlist.strings in Resources */,
+				A7F01ED11313506D00EB1F22 /* MainWindow.xib in Resources */,
+				A7F01ED71313506D00EB1F22 /* RootViewController.xib in Resources */,
+				A7351D501313584600885DFE /* Fruits Root View@2x.png in Resources */,
+				A7351D531313584F00885DFE /* Root View Background@2x.png in Resources */,
+				A7351D5A13135FE700885DFE /* ListViewController.xib in Resources */,
+				A7351DBD1314BE8900885DFE /* Grocer.db in Resources */,
+				A7351DBF131B473800885DFE /* Vegetables Root View@2x.png in Resources */,
+				A7351DC1131B550E00885DFE /* ListViewTableCellBackground@2x.png in Resources */,
+				A7351DCC131CA11600885DFE /* ListViewUINavigationBar@2x.png in Resources */,
+				A79085D3131CA78B00D6EE06 /* ListViewNavigationBarOverhang@2x.png in Resources */,
+				A79085D51324879000D6EE06 /* ListViewBackground@2x.png in Resources */,
+				A79085D71325BCD100D6EE06 /* Sketchetik.otf in Resources */,
+				A79085D91325BEE600D6EE06 /* MoanHand.otf in Resources */,
+				A725053A133538DD00162C2D /* ListViewTableCellBackgroundHighlight@2x.png in Resources */,
+				A7B5832C13A42E5B00D72D72 /* FoodViewController.xib in Resources */,
+				A7B5833113A43BE800D72D72 /* FoodViewBackButton@2x.png in Resources */,
+				A7B5833213A43BE800D72D72 /* FoodViewBackButtonTouched@2x.png in Resources */,
+				A7B5833413A43D8400D72D72 /* FoodViewUpperBackground@2x.png in Resources */,
+				A7B5833613A451ED00D72D72 /* FoodViewLowerBackground@2x.png in Resources */,
+				A79E2BA513B2D47B0061E6F3 /* SearchViewBackground@2x.png in Resources */,
+				A79E2BAA13B2D7EE0061E6F3 /* SearchViewSearchBarBackground@2x.png in Resources */,
+				A79E2BAC13B2FBEA0061E6F3 /* SearchViewTableCellBackground@2x.png in Resources */,
+				A79E2BAE13B2FCD20061E6F3 /* SearchViewTableCellBackgroundHighlight@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7F01EB51313506B00EB1F22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7F01ECB1313506C00EB1F22 /* main.m in Sources */,
+				A7F01ECE1313506C00EB1F22 /* GrocerAppDelegate.m in Sources */,
+				A7F01ED41313506D00EB1F22 /* RootViewController.m in Sources */,
+				A7351D5913135FE700885DFE /* ListViewController.m in Sources */,
+				A7351DAE1314B6C600885DFE /* FMDatabase.m in Sources */,
+				A7351DAF1314B6C600885DFE /* FMDatabaseAdditions.m in Sources */,
+				A7351DB11314B6C600885DFE /* FMResultSet.m in Sources */,
+				A7351DD7131CA2FF00885DFE /* CustomNavigationBar.m in Sources */,
+				A725053E1335697900162C2D /* FoodName.m in Sources */,
+				A7B5832B13A42E5B00D72D72 /* FoodViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A7F01EC61313506C00EB1F22 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7F01EC71313506C00EB1F22 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A7F01ECF1313506D00EB1F22 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7F01ED01313506D00EB1F22 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		A7F01ED51313506D00EB1F22 /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7F01ED61313506D00EB1F22 /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A7F01ED81313506D00EB1F22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A7F01ED91313506D00EB1F22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		A7F01EDB1313506D00EB1F22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Grocer/Grocer-Prefix.pch";
+				INFOPLIST_FILE = "Grocer/Grocer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A7F01EDC1313506D00EB1F22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Grocer/Grocer-Prefix.pch";
+				INFOPLIST_FILE = "Grocer/Grocer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7F01EB31313506B00EB1F22 /* Build configuration list for PBXProject "Grocer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7F01ED81313506D00EB1F22 /* Debug */,
+				A7F01ED91313506D00EB1F22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7F01EDA1313506D00EB1F22 /* Build configuration list for PBXNativeTarget "Grocer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7F01EDB1313506D00EB1F22 /* Debug */,
+				A7F01EDC1313506D00EB1F22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7F01EB01313506B00EB1F22 /* Project object */;
+}

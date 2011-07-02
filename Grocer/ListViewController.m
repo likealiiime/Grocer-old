@@ -119,12 +119,17 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     UITableView *tableView = (UITableView *)[self.view viewWithTag:1];
-    [tableView scrollToNearestSelectedRowAtScrollPosition:UITableViewScrollPositionMiddle animated:NO];
     NSIndexPath *path = [tableView indexPathForSelectedRow];
-    [tableView deselectRowAtIndexPath:path animated:NO];
+    if (path) {
+        [tableView scrollToNearestSelectedRowAtScrollPosition:UITableViewScrollPositionTop animated:NO];
+        [tableView deselectRowAtIndexPath:path animated:YES];
+    } else {
+        tableView.contentOffset = CGPointMake(0, 88);
+    }
+    [super viewWillAppear:animated];
 }
 
 /*- (void)viewDidAppear:(BOOL)animated {

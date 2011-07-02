@@ -152,11 +152,11 @@
  }
  */
 
-- (void)didReceiveMemoryWarning {
+/*- (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     // Relinquish ownership any cached data, images, etc that aren't in use.
-}
+}*/
 
 - (void)viewDidUnload {
     self.filteredNames = nil;
@@ -171,8 +171,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [names count];
-    //return tableView == self.searchDisplayController.searchResultsTableView ? [self.filteredNames count] : [names count];
+    return tableView == self.searchDisplayController.searchResultsTableView ? [self.filteredNames count] : [names count];
 }
 
 // Customize the appearance of table view cells.
@@ -205,7 +204,7 @@
 
 - (void)configureSearchDisplayCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     //NSLog(@"Index %i = %@", indexPath.row, [self.filteredNames objectAtIndex:indexPath.row]);
-    //[(UILabel *)[cell viewWithTag:1] setText:((FoodName *)[self.filteredNames objectAtIndex:indexPath.row]).name];
+    [(UILabel *)[cell viewWithTag:1] setText:((FoodName *)[self.filteredNames objectAtIndex:indexPath.row]).name];
 }
 
 - (UITableViewCell *)createNormalCellWithReuseIdentifier:(NSString*)identifier {
@@ -289,6 +288,7 @@
     UIImageView *background = (UIImageView *)[self.view viewWithTag:99];
     NSLog(@"background = %@", background);
     [background removeFromSuperview];
+    //NSLog(@"willEndSearch: background retainCount = %i", [background retainCount]);
 }
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller didShowSearchResultsTableView:(UITableView *)tableView {
@@ -301,6 +301,7 @@
     background.opaque = YES;
     [[tableView superview] insertSubview:background belowSubview:tableView];
     [background release];
+    //NSLog(@"didShowSearchResultsTableView: background retainCount = %i", [background retainCount]);
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {

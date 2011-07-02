@@ -193,7 +193,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    FoodViewController *foodViewController = [[FoodViewController alloc] initWithFoodName:[names objectAtIndex:indexPath.row]];
+    NSMutableArray *array = tableView == self.searchDisplayController.searchResultsTableView ? self.filteredNames : names;
+    FoodViewController *foodViewController = [[FoodViewController alloc] initWithFoodName:[array objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:foodViewController animated:YES];
     [foodViewController release];
 }

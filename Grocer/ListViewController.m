@@ -25,8 +25,8 @@
 @synthesize family=_family;
 @synthesize kingdom=_kingdom;
 
-/*@synthesize filteredNames=_filteredNames;
-@synthesize savedSearchTerm=_savedSearchTerm;
+@synthesize filteredNames=_filteredNames;
+/*@synthesize savedSearchTerm=_savedSearchTerm;
 @synthesize searchWasActive=_searchWasActive;
 @synthesize savedScopeButtonIndex=_savedScopeButtonIndex;*/
 
@@ -51,7 +51,7 @@
             [food release];
         }
         [results close];
-        //self.filteredNames = [NSMutableArray arrayWithCapacity:[names count]];
+        self.filteredNames = [NSMutableArray arrayWithCapacity:[names count]];
         
         return self;
     } else {
@@ -63,7 +63,7 @@
     [_family release];
     [_kingdom release];
     [names release];
-    //[_filteredNames release];
+    [_filteredNames release];
     [super dealloc];
 }
 
@@ -159,7 +159,7 @@
 }
 
 - (void)viewDidUnload {
-    //self.filteredNames = nil;
+    self.filteredNames = nil;
 }
 
 #pragma mark -

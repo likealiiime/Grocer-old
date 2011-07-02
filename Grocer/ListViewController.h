@@ -23,8 +23,8 @@
 @property (nonatomic, retain, readonly) NSString *family;
 @property (nonatomic, retain, readonly) NSString *kingdom;
 
-/*@property (nonatomic, retain) NSMutableArray *filteredNames;
-@property (nonatomic) NSInteger savedScopeButtonIndex;
+@property (nonatomic, retain) NSMutableArray *filteredNames;
+/*@property (nonatomic) NSInteger savedScopeButtonIndex;
 @property (nonatomic, copy) NSString *savedSearchTerm;
 @property (nonatomic) BOOL searchWasActive;*/
 

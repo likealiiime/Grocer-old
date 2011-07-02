@@ -106,20 +106,16 @@
     [customNavigationBar setBackgroundWith:[UIImage imageNamed:@"ListViewUINavigationBar"]];
     customNavigationBar.tintColor = [UIColor brownColor];
     
+    self.searchDisplayController.searchBar.tintColor = [UIColor brownColor];
     self.searchDisplayController.searchBar.scopeButtonTitles = [NSArray arrayWithObjects:self.family, [NSString stringWithFormat:@"%@s", self.kingdom], @"All", nil];
-    /*self.searchDisplayController.searchBar.tintColor = [UIColor brownColor];
+    /*
     if (self.savedSearchTerm) {
         // Restore search settings if they were saved in didReceiveMemoryWarning.
         [self.searchDisplayController setActive:self.searchWasActive];
         [self.searchDisplayController.searchBar setSelectedScopeButtonIndex:self.savedScopeButtonIndex];
         [self.searchDisplayController.searchBar setText:self.savedSearchTerm];
         self.savedSearchTerm = nil;
-    } else {
-        // Set how we want it to look
-        self.searchDisplayController.searchBar.showsScopeBar = NO;
-    }
-    //UITableView *tableView = (UITableView *)[self.view viewWithTag:1];
-    //tableView.contentOffset = CGPointMake(0, -88);*/
+    }*/
 }
 
 - (void)viewWillAppear:(BOOL)animated {

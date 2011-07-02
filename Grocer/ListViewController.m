@@ -253,9 +253,9 @@
     if (scopeIndex == 2) { // All
         conditions = @"1"; // Short-circuit the WHERE clause
     } else if (scopeIndex == 1) { // Kingdom
-        conditions = [NSString stringWithFormat:@"kingdom = \"%@\"", _kingdom];
+        conditions = [NSString stringWithFormat:@"kingdom = \"%@\"", self.kingdom];
     } else { // Family
-        conditions = [NSString stringWithFormat:@"family = \"%@\"", _family];
+        conditions = [NSString stringWithFormat:@"family = \"%@\"", self.family];
     }
     NSString *sql = [self sqlSearch:@"id, specific, general, family, kingdom"
                                 query:query

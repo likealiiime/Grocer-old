@@ -26,9 +26,9 @@
 @synthesize kingdom=_kingdom;
 
 @synthesize filteredNames=_filteredNames;
-@synthesize savedSearchTerm=_savedSearchTerm;
+/*@synthesize savedSearchTerm=_savedSearchTerm;
 @synthesize searchWasActive=_searchWasActive;
-@synthesize savedScopeButtonIndex=_savedScopeButtonIndex;
+@synthesize savedScopeButtonIndex=_savedScopeButtonIndex;*/
 
 #pragma mark -
 #pragma mark Object Lifecycle Methods
@@ -107,19 +107,16 @@
     customNavigationBar.tintColor = [UIColor brownColor];
     
     self.searchDisplayController.searchBar.tintColor = [UIColor brownColor];
-    //self.searchDisplayController.searchBar.scopeButtonTitles = [NSArray arrayWithObjects:[self.kingdom autorelease], [self.family autorelease], @"All", nil];
+    self.searchDisplayController.searchBar.scopeButtonTitles = [NSArray arrayWithObjects:self.family, [NSString stringWithFormat:@"%@s", self.kingdom], @"All", nil];
+    [self updateSearchBarPlaceholderWithScopeAtIndex:self.searchDisplayController.searchBar.selectedScopeButtonIndex];
+    /*
     if (self.savedSearchTerm) {
         // Restore search settings if they were saved in didReceiveMemoryWarning.
         [self.searchDisplayController setActive:self.searchWasActive];
         [self.searchDisplayController.searchBar setSelectedScopeButtonIndex:self.savedScopeButtonIndex];
         [self.searchDisplayController.searchBar setText:self.savedSearchTerm];
         self.savedSearchTerm = nil;
-    } else {
-        // Set how we want it to look
-        self.searchDisplayController.searchBar.showsScopeBar = NO;
-    }
-    //UITableView *tableView = (UITableView *)[self.view viewWithTag:1];
-    //tableView.contentOffset = CGPointMake(0, -88);
+    }*/
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -143,9 +140,9 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
     // Save the state of the search UI so that it can be restored if the view is recreated
-    self.searchWasActive = [self.searchDisplayController isActive];
+    /*self.searchWasActive = [self.searchDisplayController isActive];
     self.savedSearchTerm = [self.searchDisplayController.searchBar text];
-    self.savedScopeButtonIndex = [self.searchDisplayController.searchBar selectedScopeButtonIndex];
+    self.savedScopeButtonIndex = [self.searchDisplayController.searchBar selectedScopeButtonIndex];*/
 }
 
 /*
@@ -156,11 +153,11 @@
  }
  */
 
-- (void)didReceiveMemoryWarning {
+/*- (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     // Relinquish ownership any cached data, images, etc that aren't in use.
-}
+}*/
 
 - (void)viewDidUnload {
     self.filteredNames = nil;
@@ -196,7 +193,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    FoodViewController *foodViewController = [[FoodViewController alloc] initWithFoodName:[names objectAtIndex:indexPath.row]];
+    NSMutableArray *array = tableView == self.searchDisplayController.searchResultsTableView ? self.filteredNames : names;
+    FoodViewController *foodViewController = [[FoodViewController alloc] initWithFoodName:[array objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:foodViewController animated:YES];
     [foodViewController release];
 }
@@ -207,7 +205,7 @@
 }
 
 - (void)configureSearchDisplayCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Index %i = %@", indexPath.row, [self.filteredNames objectAtIndex:indexPath.row]);
+    //NSLog(@"Index %i = %@", indexPath.row, [self.filteredNames objectAtIndex:indexPath.row]);
     [(UILabel *)[cell viewWithTag:1] setText:((FoodName *)[self.filteredNames objectAtIndex:indexPath.row]).name];
 }
 
@@ -247,14 +245,13 @@
 - (void)filterNamesForQuery:(NSString *)query inScopeNamed:(NSString *)scope atIndex:(NSInteger)scopeIndex {
 	// Update the filtered array based on the search text and scope.
 	[self.filteredNames removeAllObjects]; // First clear the filtered array.
-    FoodName *food = [[FoodName alloc] initWithId:0 specific:@"Hello" general:@"World"];
+    /*FoodName *food = [[FoodName alloc] initWithId:0 specific:@"Hello" general:@"World"];
     [self.filteredNames addObject:food];
-    [food release];
-	/*
-	// Search the main list for products whose type matches the scope (if selected) and whose name matches searchText; add items that match to the filtered array.
+    [food release];*/
+	
     NSString *conditions;
     if (scopeIndex == 2) { // All
-        conditions = @"1";
+        conditions = @"1"; // Short-circuit the WHERE clause
     } else if (scopeIndex == 1) { // Kingdom
         conditions = [NSString stringWithFormat:@"kingdom = \"%@\"", _kingdom];
     } else { // Family
@@ -273,14 +270,13 @@
         [self.filteredNames addObject:food];
         [food release];
     }
-    [results close];*/
+    [results close];
 }
 
 #pragma mark -
 #pragma mark UISearchDisplayController Delegate Methods
 
 - (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller {
-    //[self.searchDisplayController.searchBar setShowsScopeBar:<#(BOOL)#>
     [UIView beginAnimations:nil context:NULL];
     [self.view viewWithTag:2].alpha = 0;
     [UIView commitAnimations];
@@ -290,8 +286,14 @@
     [UIView beginAnimations:nil context:NULL];
     [self.view viewWithTag:2].alpha = 1;
     [UIView commitAnimations];
-    NSLog(@"viewWithTag:99 = %@", [self.view viewWithTag:99]);
-    [[self.view viewWithTag:99] removeFromSuperview];
+    
+    // Don't put this in searchDisplayController:willUnloadTableView: because it will probably
+    // not get called unless there's a memory issue, and the background mask will remain after
+    // search ends.
+    UIImageView *background = (UIImageView *)[self.view viewWithTag:99];
+    //NSLog(@"background = %@", background);
+    [background removeFromSuperview];
+    //NSLog(@"willEndSearch: background retainCount = %i", [background retainCount]);
 }
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller didShowSearchResultsTableView:(UITableView *)tableView {
@@ -302,8 +304,9 @@
     background.tag = 99;
     background.frame = CGRectMake(0,88, 320,460);
     background.opaque = YES;
-    [[tableView superview] insertSubview:background belowSubview:tableView];
+    [self.view insertSubview:background belowSubview:tableView];
     [background release];
+    //NSLog(@"didShowSearchResultsTableView: background retainCount = %i", [background retainCount]);
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
@@ -312,13 +315,17 @@
     //NSLog(@"Reloading for query: %@", searchString);
     return YES;
 }
-/*
+
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
-    NSString *scope = [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption];
+    NSString *scope = [self updateSearchBarPlaceholderWithScopeAtIndex:searchOption];
     [self filterNamesForQuery:self.searchDisplayController.searchBar.text inScopeNamed:scope atIndex:searchOption];
-    //self.searchDisplayController.searchBar.placeholder = [NSString stringWithFormat:@"Search %@", scope];
     //NSLog(@"Reloading for scope: %@", scope);
     return YES;
-}*/
+}
 
+- (NSString *)updateSearchBarPlaceholderWithScopeAtIndex:(NSInteger)index {
+    NSString *scope = [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:index];
+    self.searchDisplayController.searchBar.placeholder = [NSString stringWithFormat:@"Search %@", scope];
+    return scope;
+}
 @end

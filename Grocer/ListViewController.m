@@ -106,7 +106,6 @@
     [customNavigationBar setBackgroundWith:[UIImage imageNamed:@"ListViewUINavigationBar"]];
     customNavigationBar.tintColor = [UIColor brownColor];
     
-    self.searchDisplayController.searchBar.tintColor = [UIColor brownColor];
     self.searchDisplayController.searchBar.scopeButtonTitles = [NSArray arrayWithObjects:self.family, [NSString stringWithFormat:@"%@s", self.kingdom], @"All", nil];
     [self updateSearchBarPlaceholderWithScopeAtIndex:self.searchDisplayController.searchBar.selectedScopeButtonIndex];
     /*

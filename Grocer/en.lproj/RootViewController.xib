@@ -81,7 +81,7 @@
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 										<object class="NSCustomResource" key="IBUIImage">
 											<string key="NSClassName">NSImage</string>
-											<string key="NSResourceName">SearchViewBackground@2x.png</string>
+											<string key="NSResourceName">ListViewBackground@2x.png</string>
 										</object>
 									</object>
 									<object class="IBUISearchBar" id="1066661643">
@@ -93,6 +93,10 @@
 										<reference key="NSNextKeyView" ref="753508934"/>
 										<int key="IBUIContentMode">3</int>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+										<object class="NSColor" key="IBTintColor">
+											<int key="NSColorSpace">1</int>
+											<bytes key="NSRGB">MC41MDE5NjA4MTQgMC4yNTA5ODA0MDcgMAA</bytes>
+										</object>
 										<object class="IBUITextInputTraits" key="IBTextInputTraits">
 											<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 										</object>
@@ -832,15 +836,15 @@
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>Fruits Root View@2x.png</string>
+				<string>ListViewBackground@2x.png</string>
 				<string>Root View Background@2x.png</string>
-				<string>SearchViewBackground@2x.png</string>
 				<string>Vegetables Root View@2x.png</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{640, 920}</string>
-				<string>{640, 960}</string>
 				<string>{640, 920}</string>
+				<string>{640, 960}</string>
 				<string>{640, 920}</string>
 			</object>
 		</object>

@@ -46,18 +46,6 @@
     scrollView.contentOffset = CGPointMake(320, 0);
     self.title = @"Back";
     
-    // Set custom background for UISearchBar
-    for (UIView *subview in self.searchDisplayController.searchBar.subviews) {
-        if ([subview isKindOfClass:NSClassFromString(@"UISearchBarBackground")]) {
-            UIView *bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SearchViewSearchBarBackground"]];
-            bg.frame = subview.frame;
-            [self.searchDisplayController.searchBar insertSubview:bg aboveSubview:subview];
-            [subview removeFromSuperview];
-            break;
-        }
-    }
-    
-    self.searchDisplayController.searchBar.tintColor = [UIColor colorWithHue:0.63 saturation:0.3 brightness:0.7 alpha:1.0];
     self.filteredNames = [NSMutableArray array];
     if (self.savedSearchTerm) {
         // Restore search settings if they were saved in didReceiveMemoryWarning.
@@ -65,10 +53,6 @@
         [self.searchDisplayController.searchBar setSelectedScopeButtonIndex:self.savedScopeButtonIndex];
         [self.searchDisplayController.searchBar setText:self.savedSearchTerm];
         self.savedSearchTerm = nil;
-    } else {
-        // Set how we want it to look
-        self.searchDisplayController.searchBar.showsScopeBar = NO;
-        
     }
 }
 
@@ -134,20 +118,20 @@
             select, query];
 }
 
-- (void)filterNamesForQuery:(NSString *)query inScopeNamed:(NSString *)scope atIndex:(NSInteger)scopeIndex {
+- (void)filterNamesForQuery:(NSString *)query atIndex:(NSInteger)scopeIndex {
 	// Update the filtered array based on the search text and scope.
 	[self.filteredNames removeAllObjects]; // First clear the filtered array.
     NSString *sql = [self sqlSearch:@"id, specific, general" query:query];
     FMResultSet *results = [db executeQuery:sql];
-    NSLog(@"\n---");
+    /*NSLog(@"\n---");
     NSLog(@"DB: %@", db);
     NSLog(@"SQL: %@", sql);
-    NSLog(@"Error: %@", [db lastErrorMessage]);
+    NSLog(@"Error: %@", [db lastErrorMessage]);*/
     while ([results next]) {
         FoodName *food = [[FoodName alloc] initWithId:[results intForColumn:@"id"]
                                              specific:[results stringForColumn:@"specific"]
                                               general:[results stringForColumn:@"general"]];
-        NSLog(@"Found: %@", food.name);
+        //NSLog(@"Found: %@", food.name);
         [self.filteredNames addObject:food];
         [food release];
     }
@@ -164,8 +148,7 @@
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
-    NSString *scope = [self.searchDisplayController.searchBar.scopeButtonTitles objectAtIndex:self.searchDisplayController.searchBar.selectedScopeButtonIndex];
-    [self filterNamesForQuery:searchString inScopeNamed:scope atIndex:self.searchDisplayController.searchBar.selectedScopeButtonIndex];
+    [self filterNamesForQuery:searchString atIndex:self.searchDisplayController.searchBar.selectedScopeButtonIndex];
     //NSLog(@"Reloading for query: %@", searchString);
     return YES;
 }
@@ -189,20 +172,20 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) cell = [self createCellWithReuseIdentifier:CellIdentifier];
-    [(UILabel *)[cell viewWithTag:1] setText:((FoodName *)[self.filteredNames objectAtIndex:indexPath.row]).name];
+    FoodName *food = (FoodName *)[self.filteredNames objectAtIndex:indexPath.row];
+    [(UILabel *)[cell viewWithTag:1] setText:food.name];
     return cell;
 }
 
 - (UITableViewCell *)createCellWithReuseIdentifier:(NSString*)identifier {
     UITableViewCell *cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier] autorelease];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SearchViewTableCellBackground"]];
+    UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ListViewTableCellBackground"]];
     background.opaque = YES;
     cell.backgroundView = background;
     [background release];
     
-    UIImageView *highlight = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SearchViewTableCellBackgroundHighlight"]];
+    UIImageView *highlight = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ListViewTableCellBackgroundHighlight"]];
     highlight.opaque = YES;
     cell.selectedBackgroundView = highlight;
     [highlight release];
@@ -210,8 +193,7 @@
     UILabel *label = [[[UILabel alloc] initWithFrame:CGRectMake(70,10, 250,25)] autorelease];
     label.tag = 1;
     label.font = [UIFont fontWithName:@"Sketchetik" size:20];
-    label.textColor = [UIColor colorWithHue:0.63 saturation:0.43 brightness:0.41 alpha:1.0];
-    label.highlightedTextColor = [UIColor colorWithHue:0.63 saturation:0.43 brightness:0.3 alpha:1.0];
+    label.textColor = [UIColor colorWithWhite:(4.0/16.0) alpha:1];
     label.backgroundColor = [UIColor clearColor];
     label.opaque = NO;
     label.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
@@ -223,7 +205,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    FoodViewController *foodViewController = [[FoodViewController alloc] initWithFoodName:[self.filteredNames objectAtIndex:indexPath.row]];
+    FoodViewController *foodViewController = [[FoodViewController alloc] initWithFoodName:(FoodName *)[self.filteredNames objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:foodViewController animated:YES];
     [foodViewController release];
 }

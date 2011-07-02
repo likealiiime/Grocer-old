@@ -16,7 +16,7 @@
 - (IBAction)selectFamily:(id)sender;
 
 - (NSString *) sqlSearch:(NSString *)select query:(NSString *)query;
-- (void) filterNamesForQuery:(NSString *)query inScopeNamed:(NSString *)scope atIndex:(NSInteger)index;
+- (void) filterNamesForQuery:(NSString *)query atIndex:(NSInteger)index;
 - (UITableViewCell *)createCellWithReuseIdentifier:(NSString*)identifier;
     
 @property (nonatomic, readonly) NSString *kingdom;

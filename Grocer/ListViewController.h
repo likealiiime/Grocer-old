@@ -9,10 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "FMDatabase.h"
 
-@interface ListViewController : UIViewController<UISearchDisplayDelegate> {
+@interface ListViewController : UIViewController {
     FMDatabase *db;
     NSMutableArray *names;
-    NSString *singularFamilyName;
 }
 
 - (id)initWithFamily:(NSString *)theFamily inKingdom:(NSString *)theKingdom;
@@ -24,9 +23,9 @@
 @property (nonatomic, retain, readonly) NSString *family;
 @property (nonatomic, retain, readonly) NSString *kingdom;
 
-@property (nonatomic, retain) NSMutableArray *filteredNames;
+/*@property (nonatomic, retain) NSMutableArray *filteredNames;
 @property (nonatomic) NSInteger savedScopeButtonIndex;
 @property (nonatomic, copy) NSString *savedSearchTerm;
-@property (nonatomic) BOOL searchWasActive;
+@property (nonatomic) BOOL searchWasActive;*/
 
 @end

@@ -65,33 +65,23 @@
 						<int key="NSvFlags">274</int>
 						<object class="NSMutableArray" key="NSSubviews">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUISearchBar" id="124565258">
+							<object class="IBUISearchBar" id="303665996">
 								<reference key="NSNextResponder" ref="873029372"/>
 								<int key="NSvFlags">290</int>
 								<string key="NSFrameSize">{320, 44}</string>
 								<reference key="NSSuperview" ref="873029372"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="317163040"/>
 								<int key="IBUIContentMode">3</int>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<string key="IBPrompt"/>
-								<string key="IBPlaceholder">Search</string>
-								<object class="NSColor" key="IBTintColor">
-									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MC41MDE5NjA4MTQgMC4yNTA5ODA0MDcgMAA</bytes>
-								</object>
 								<object class="IBUITextInputTraits" key="IBTextInputTraits">
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								</object>
-								<object class="NSArray" key="IBScopeButtonTitles">
-									<bool key="EncodedWithXMLCoder">YES</bool>
 								</object>
 							</object>
 						</object>
 						<string key="NSFrameSize">{320, 416}</string>
 						<reference key="NSSuperview" ref="606356114"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="124565258"/>
+						<reference key="NSNextKeyView"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MCAwAA</bytes>
@@ -113,7 +103,7 @@
 						<float key="IBUIRowHeight">42</float>
 						<float key="IBUISectionHeaderHeight">22</float>
 						<float key="IBUISectionFooterHeight">22</float>
-						<reference key="IBUITableHeaderView" ref="124565258"/>
+						<reference key="IBUITableHeaderView" ref="303665996"/>
 					</object>
 					<object class="IBUIImageView" id="317163040">
 						<reference key="NSNextResponder" ref="606356114"/>
@@ -182,9 +172,9 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">searchBar</string>
 						<reference key="source" ref="6561272"/>
-						<reference key="destination" ref="124565258"/>
+						<reference key="destination" ref="303665996"/>
 					</object>
-					<int key="connectionID">23</int>
+					<int key="connectionID">32</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -192,7 +182,7 @@
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="6561272"/>
 					</object>
-					<int key="connectionID">24</int>
+					<int key="connectionID">33</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -200,7 +190,7 @@
 						<reference key="source" ref="6561272"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
-					<int key="connectionID">25</int>
+					<int key="connectionID">34</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -208,7 +198,7 @@
 						<reference key="source" ref="6561272"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
-					<int key="connectionID">26</int>
+					<int key="connectionID">35</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -216,7 +206,7 @@
 						<reference key="source" ref="6561272"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
-					<int key="connectionID">27</int>
+					<int key="connectionID">36</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -224,15 +214,15 @@
 						<reference key="source" ref="6561272"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
-					<int key="connectionID">28</int>
+					<int key="connectionID">37</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="124565258"/>
+						<reference key="source" ref="303665996"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
-					<int key="connectionID">29</int>
+					<int key="connectionID">38</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -271,7 +261,7 @@
 						<reference key="object" ref="873029372"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="124565258"/>
+							<reference ref="303665996"/>
 						</object>
 						<reference key="parent" ref="606356114"/>
 					</object>
@@ -286,16 +276,14 @@
 						<reference key="parent" ref="606356114"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">21</int>
-						<reference key="object" ref="124565258"/>
-						<reference key="parent" ref="873029372"/>
-						<string key="objectName">Search Bar With Scope Bar</string>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">22</int>
+						<int key="objectID">31</int>
 						<reference key="object" ref="6561272"/>
 						<reference key="parent" ref="0"/>
-						<string key="objectName">Search Display Controller</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">30</int>
+						<reference key="object" ref="303665996"/>
+						<reference key="parent" ref="873029372"/>
 					</object>
 				</object>
 			</object>
@@ -308,7 +296,7 @@
 					<string>15.IBPluginDependency</string>
 					<string>16.IBPluginDependency</string>
 					<string>20.IBPluginDependency</string>
-					<string>21.IBPluginDependency</string>
+					<string>30.IBPluginDependency</string>
 					<string>4.IBEditorWindowLastContentRect</string>
 					<string>4.IBPluginDependency</string>
 				</object>
@@ -336,7 +324,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">29</int>
+			<int key="maxID">38</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

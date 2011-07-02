@@ -25,10 +25,10 @@
 @synthesize family=_family;
 @synthesize kingdom=_kingdom;
 
-@synthesize filteredNames=_filteredNames;
+/*@synthesize filteredNames=_filteredNames;
 @synthesize savedSearchTerm=_savedSearchTerm;
 @synthesize searchWasActive=_searchWasActive;
-@synthesize savedScopeButtonIndex=_savedScopeButtonIndex;
+@synthesize savedScopeButtonIndex=_savedScopeButtonIndex;*/
 
 #pragma mark -
 #pragma mark Object Lifecycle Methods
@@ -51,7 +51,7 @@
             [food release];
         }
         [results close];
-        self.filteredNames = [NSMutableArray arrayWithCapacity:[names count]];
+        //self.filteredNames = [NSMutableArray arrayWithCapacity:[names count]];
         
         return self;
     } else {
@@ -63,7 +63,7 @@
     [_family release];
     [_kingdom release];
     [names release];
-    [_filteredNames release];
+    //[_filteredNames release];
     [super dealloc];
 }
 
@@ -106,7 +106,7 @@
     [customNavigationBar setBackgroundWith:[UIImage imageNamed:@"ListViewUINavigationBar"]];
     customNavigationBar.tintColor = [UIColor brownColor];
     
-    self.searchDisplayController.searchBar.tintColor = [UIColor brownColor];
+    /*self.searchDisplayController.searchBar.tintColor = [UIColor brownColor];
     //self.searchDisplayController.searchBar.scopeButtonTitles = [NSArray arrayWithObjects:[self.kingdom autorelease], [self.family autorelease], @"All", nil];
     if (self.savedSearchTerm) {
         // Restore search settings if they were saved in didReceiveMemoryWarning.
@@ -119,7 +119,7 @@
         self.searchDisplayController.searchBar.showsScopeBar = NO;
     }
     //UITableView *tableView = (UITableView *)[self.view viewWithTag:1];
-    //tableView.contentOffset = CGPointMake(0, -88);
+    //tableView.contentOffset = CGPointMake(0, -88);*/
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -143,9 +143,9 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
     // Save the state of the search UI so that it can be restored if the view is recreated
-    self.searchWasActive = [self.searchDisplayController isActive];
+    /*self.searchWasActive = [self.searchDisplayController isActive];
     self.savedSearchTerm = [self.searchDisplayController.searchBar text];
-    self.savedScopeButtonIndex = [self.searchDisplayController.searchBar selectedScopeButtonIndex];
+    self.savedScopeButtonIndex = [self.searchDisplayController.searchBar selectedScopeButtonIndex];*/
 }
 
 /*
@@ -163,7 +163,7 @@
 }
 
 - (void)viewDidUnload {
-    self.filteredNames = nil;
+    //self.filteredNames = nil;
 }
 
 #pragma mark -
@@ -175,7 +175,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return tableView == self.searchDisplayController.searchResultsTableView ? [self.filteredNames count] : [names count];
+    return [names count];
+    //return tableView == self.searchDisplayController.searchResultsTableView ? [self.filteredNames count] : [names count];
 }
 
 // Customize the appearance of table view cells.
@@ -207,8 +208,8 @@
 }
 
 - (void)configureSearchDisplayCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Index %i = %@", indexPath.row, [self.filteredNames objectAtIndex:indexPath.row]);
-    [(UILabel *)[cell viewWithTag:1] setText:((FoodName *)[self.filteredNames objectAtIndex:indexPath.row]).name];
+    //NSLog(@"Index %i = %@", indexPath.row, [self.filteredNames objectAtIndex:indexPath.row]);
+    //[(UILabel *)[cell viewWithTag:1] setText:((FoodName *)[self.filteredNames objectAtIndex:indexPath.row]).name];
 }
 
 - (UITableViewCell *)createNormalCellWithReuseIdentifier:(NSString*)identifier {
@@ -245,7 +246,7 @@
 #pragma mark Searching
 
 - (void)filterNamesForQuery:(NSString *)query inScopeNamed:(NSString *)scope atIndex:(NSInteger)scopeIndex {
-	// Update the filtered array based on the search text and scope.
+	/* Update the filtered array based on the search text and scope.
 	[self.filteredNames removeAllObjects]; // First clear the filtered array.
     FoodName *food = [[FoodName alloc] initWithId:0 specific:@"Hello" general:@"World"];
     [self.filteredNames addObject:food];
@@ -280,7 +281,6 @@
 #pragma mark UISearchDisplayController Delegate Methods
 
 - (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller {
-    //[self.searchDisplayController.searchBar setShowsScopeBar:<#(BOOL)#>
     [UIView beginAnimations:nil context:NULL];
     [self.view viewWithTag:2].alpha = 0;
     [UIView commitAnimations];

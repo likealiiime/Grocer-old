@@ -106,8 +106,8 @@
     [customNavigationBar setBackgroundWith:[UIImage imageNamed:@"ListViewUINavigationBar"]];
     customNavigationBar.tintColor = [UIColor brownColor];
     
+    self.searchDisplayController.searchBar.scopeButtonTitles = [NSArray arrayWithObjects:self.family, [NSString stringWithFormat:@"%@s", self.kingdom], @"All", nil];
     /*self.searchDisplayController.searchBar.tintColor = [UIColor brownColor];
-    //self.searchDisplayController.searchBar.scopeButtonTitles = [NSArray arrayWithObjects:[self.kingdom autorelease], [self.family autorelease], @"All", nil];
     if (self.savedSearchTerm) {
         // Restore search settings if they were saved in didReceiveMemoryWarning.
         [self.searchDisplayController setActive:self.searchWasActive];

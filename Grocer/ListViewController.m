@@ -241,16 +241,15 @@
 #pragma mark Searching
 
 - (void)filterNamesForQuery:(NSString *)query inScopeNamed:(NSString *)scope atIndex:(NSInteger)scopeIndex {
-	/* Update the filtered array based on the search text and scope.
+	// Update the filtered array based on the search text and scope.
 	[self.filteredNames removeAllObjects]; // First clear the filtered array.
-    FoodName *food = [[FoodName alloc] initWithId:0 specific:@"Hello" general:@"World"];
+    /*FoodName *food = [[FoodName alloc] initWithId:0 specific:@"Hello" general:@"World"];
     [self.filteredNames addObject:food];
-    [food release];
-	/*
-	// Search the main list for products whose type matches the scope (if selected) and whose name matches searchText; add items that match to the filtered array.
+    [food release];*/
+	
     NSString *conditions;
     if (scopeIndex == 2) { // All
-        conditions = @"1";
+        conditions = @"1"; // Short-circuit the WHERE clause
     } else if (scopeIndex == 1) { // Kingdom
         conditions = [NSString stringWithFormat:@"kingdom = \"%@\"", _kingdom];
     } else { // Family
@@ -269,7 +268,7 @@
         [self.filteredNames addObject:food];
         [food release];
     }
-    [results close];*/
+    [results close];
 }
 
 #pragma mark -
@@ -285,8 +284,12 @@
     [UIView beginAnimations:nil context:NULL];
     [self.view viewWithTag:2].alpha = 1;
     [UIView commitAnimations];
+    
+    // Don't put this in searchDisplayController:willUnloadTableView: because it will probably
+    // not get called unless there's a memory issue, and the background mask will remain after
+    // search ends.
     UIImageView *background = (UIImageView *)[self.view viewWithTag:99];
-    NSLog(@"background = %@", background);
+    //NSLog(@"background = %@", background);
     [background removeFromSuperview];
     //NSLog(@"willEndSearch: background retainCount = %i", [background retainCount]);
 }
@@ -310,13 +313,13 @@
     //NSLog(@"Reloading for query: %@", searchString);
     return YES;
 }
-/*
+
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
     NSString *scope = [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption];
     [self filterNamesForQuery:self.searchDisplayController.searchBar.text inScopeNamed:scope atIndex:searchOption];
-    //self.searchDisplayController.searchBar.placeholder = [NSString stringWithFormat:@"Search %@", scope];
+    self.searchDisplayController.searchBar.placeholder = [NSString stringWithFormat:@"Search %@", scope];
     //NSLog(@"Reloading for scope: %@", scope);
     return YES;
-}*/
+}
 
 @end

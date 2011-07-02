@@ -108,6 +108,7 @@
     
     self.searchDisplayController.searchBar.tintColor = [UIColor brownColor];
     self.searchDisplayController.searchBar.scopeButtonTitles = [NSArray arrayWithObjects:self.family, [NSString stringWithFormat:@"%@s", self.kingdom], @"All", nil];
+    [self updateSearchBarPlaceholderWithScopeAtIndex:self.searchDisplayController.searchBar.selectedScopeButtonIndex];
     /*
     if (self.savedSearchTerm) {
         // Restore search settings if they were saved in didReceiveMemoryWarning.
@@ -302,7 +303,7 @@
     background.tag = 99;
     background.frame = CGRectMake(0,88, 320,460);
     background.opaque = YES;
-    [[tableView superview] insertSubview:background belowSubview:tableView];
+    [self.view insertSubview:background belowSubview:tableView];
     [background release];
     //NSLog(@"didShowSearchResultsTableView: background retainCount = %i", [background retainCount]);
 }
@@ -315,11 +316,15 @@
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
-    NSString *scope = [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption];
+    NSString *scope = [self updateSearchBarPlaceholderWithScopeAtIndex:searchOption];
     [self filterNamesForQuery:self.searchDisplayController.searchBar.text inScopeNamed:scope atIndex:searchOption];
-    self.searchDisplayController.searchBar.placeholder = [NSString stringWithFormat:@"Search %@", scope];
     //NSLog(@"Reloading for scope: %@", scope);
     return YES;
 }
 
+- (NSString *)updateSearchBarPlaceholderWithScopeAtIndex:(NSInteger)index {
+    NSString *scope = [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:index];
+    self.searchDisplayController.searchBar.placeholder = [NSString stringWithFormat:@"Search %@", scope];
+    return scope;
+}
 @end

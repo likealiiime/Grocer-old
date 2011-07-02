@@ -19,6 +19,7 @@
 - (NSString *) sqlSelect:(NSString *)select where:(NSString *)conditions;
 - (NSString *) sqlSearch:(NSString *)select query:(NSString *)query where:(NSString *)conditions;
 - (void) filterNamesForQuery:(NSString *)query inScopeNamed:(NSString *)scope atIndex:(NSInteger)index;
+- (NSString *)updateSearchBarPlaceholderWithScopeAtIndex:(NSInteger)index;
 
 @property (nonatomic, retain, readonly) NSString *family;
 @property (nonatomic, retain, readonly) NSString *kingdom;

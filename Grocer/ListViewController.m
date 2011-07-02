@@ -196,6 +196,7 @@
     FoodViewController *foodViewController = [[FoodViewController alloc] initWithFoodName:[array objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:foodViewController animated:YES];
     [foodViewController release];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)configureNormalCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {

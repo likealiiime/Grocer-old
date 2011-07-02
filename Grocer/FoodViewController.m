@@ -100,11 +100,6 @@
     [super viewWillAppear:animated];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-    [super viewWillDisappear:animated];
-}
-
 - (IBAction)popViewController:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }

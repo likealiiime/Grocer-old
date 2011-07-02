@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FMDatabase.h"
 
-@interface ListViewController : UIViewController {
+@interface ListViewController : UIViewController<UISearchDisplayDelegate> {
     FMDatabase *db;
     NSMutableArray *names;
 }

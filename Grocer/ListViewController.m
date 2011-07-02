@@ -286,8 +286,9 @@
     [UIView beginAnimations:nil context:NULL];
     [self.view viewWithTag:2].alpha = 1;
     [UIView commitAnimations];
-    NSLog(@"viewWithTag:99 = %@", [self.view viewWithTag:99]);
-    [[self.view viewWithTag:99] removeFromSuperview];
+    UIImageView *background = (UIImageView *)[self.view viewWithTag:99];
+    NSLog(@"background = %@", background);
+    [background removeFromSuperview];
 }
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller didShowSearchResultsTableView:(UITableView *)tableView {

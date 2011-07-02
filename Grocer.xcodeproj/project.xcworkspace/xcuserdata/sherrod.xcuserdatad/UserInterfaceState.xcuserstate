@@ -6977,10 +6977,10 @@
     s = 0;
 }</string>
 		</dict>
-		<real>331328509.84671301</real>
-		<string>{3079, 2868}</string>
-		<string>{4886, 0}</string>
-		<string>-viewDidLoad</string>
+		<real>331328714.97397703</real>
+		<string>{11123, 2819}</string>
+		<string>{12278, 0}</string>
+		<string>-searchDisplayControllerWillEndSearch:</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
 		<dict>
 			<key>$class</key>
@@ -7014,7 +7014,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {840, 802}}</string>
+		<string>{{0, 0}, {840, 780}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -23742,7 +23742,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>151</integer>
+					<integer>161</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -26949,9 +26949,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>331328509.84214401</real>
-		<string>{3079, 2868}</string>
-		<string>{4886, 0}</string>
+		<real>331328714.970474</real>
+		<string>{11123, 2819}</string>
+		<string>{12278, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -27378,9 +27378,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>331328069.777219</real>
-		<string>{0, 1000}</string>
-		<string>{700, 0}</string>
+		<real>331328629.26437402</real>
+		<string>{0, 1025}</string>
+		<string>{1019, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -30117,7 +30117,7 @@
 				<integer>1867</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>331328469.091465</real>
+			<real>331328606.59846801</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -30128,7 +30128,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 3:41 PM</string>
+		<string>Today at 3:43 PM</string>
 		<integer>106</integer>
 		<dict>
 			<key>$class</key>
@@ -30201,7 +30201,7 @@
 				<integer>1875</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/sherrod/Experiments/Grocer/Grocer/ListViewController.xib</string>
+		<string>file://localhost/Users/sherrod/Experiments/Grocer/Grocer/ListViewController.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -30219,7 +30219,7 @@
 				<integer>1877</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/sherrod/Experiments/Grocer/Grocer/ListViewController.h</string>
+		<string>file://localhost/Users/sherrod/Experiments/Grocer/Grocer/ListViewController.xib</string>
 		<dict>
 			<key>$class</key>
 			<dict>

@@ -94,7 +94,9 @@
     label.shadowColor = [UIColor colorWithWhite:0.78 alpha:1];
     label.shadowOffset = CGSizeMake(0, 1);
     label.textAlignment = UITextAlignmentCenter;
-    label.font = [UIFont fontWithName:@"MoanHand" size:32.0];
+    label.font = [UIFont fontWithName:@"MoanHand" size:32];
+    label.minimumFontSize = 20;
+    label.adjustsFontSizeToFitWidth = YES;
     label.opaque = NO;
     label.backgroundColor = [UIColor clearColor];
     label.numberOfLines = 1;

@@ -124,7 +124,6 @@
     UITableView *tableView = (UITableView *)[self.view viewWithTag:1];
     NSIndexPath *path = [tableView indexPathForSelectedRow];
     if (path) {
-        [tableView scrollToNearestSelectedRowAtScrollPosition:UITableViewScrollPositionTop animated:NO];
         [tableView deselectRowAtIndexPath:path animated:YES];
     } else {
         tableView.contentOffset = CGPointMake(0, 88);

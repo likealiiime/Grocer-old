@@ -114,7 +114,7 @@
 #pragma mark Searching
 
 - (NSString *) sqlSearch:(NSString *)select query:(NSString *)query {
-    return [NSString stringWithFormat:@"SELECT %@ FROM foods WHERE (specific || general) LIKE \"%%%@%%\" ORDER BY (specific || general) ASC",
+    return [NSString stringWithFormat:@"SELECT %@ FROM foods WHERE available = 1 AND (alternateNames || specific || general) LIKE \"%%%@%%\" ORDER BY (specific || general) ASC",
             select, query];
 }
 

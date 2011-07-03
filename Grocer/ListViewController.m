@@ -71,11 +71,11 @@
 #pragma mark SQL methods
 
 - (NSString *) sqlSelect:(NSString *)select where:(NSString *)conditions {
-    return [NSString stringWithFormat:@"SELECT %@ FROM foods WHERE %@ ORDER BY (specific || general) ASC",
+    return [NSString stringWithFormat:@"SELECT %@ FROM foods WHERE available = 1 AND %@ ORDER BY (specific || general) ASC",
             select, conditions];
 }
 - (NSString *) sqlSearch:(NSString *)select query:(NSString *)query where:(NSString *)conditions {
-    return [NSString stringWithFormat:@"SELECT %@ FROM foods WHERE (specific || general) LIKE \"%%%@%%\" AND %@ ORDER BY (specific || general) ASC",
+    return [NSString stringWithFormat:@"SELECT %@ FROM foods WHERE available = 1 AND (alternateNames || specific || general) LIKE \"%%%@%%\" AND %@ ORDER BY (specific || general) ASC",
             select, query, conditions];
 }
 

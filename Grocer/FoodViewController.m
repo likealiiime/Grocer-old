@@ -16,14 +16,19 @@
     self = [super initWithNibName:@"FoodViewController" bundle:nil];
     if (self) {
         food = [newFoodName retain];
+        
         db = ((GrocerAppDelegate *)[UIApplication sharedApplication].delegate).db;
+        
+        swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(popViewController:)];
+        swipe.direction = UISwipeGestureRecognizerDirectionRight;
+        [self.view addGestureRecognizer:swipe];
         
         FMResultSet *results = [db executeQuery:[self sqlSelect:@"taste,alternateNames"]];
         [results next];
         taste = [results stringForColumn:@"taste"];
         NSString *sqlAlternateNames = [results stringForColumn:@"alternateNames"];
         NSArray *alternateNames = [sqlAlternateNames length] > 0 ? [sqlAlternateNames componentsSeparatedByString:@","] : [NSArray new];
-        NSLog(@"%d alternate names", [alternateNames count]);
+        //NSLog(@"%d alternate names", [alternateNames count]);
         [results close];
         
         if ([alternateNames count] > 0) {
@@ -50,6 +55,7 @@
 
 - (void)dealloc
 {
+    [swipe release];
     [food release];
     [super dealloc];
 }
@@ -105,5 +111,9 @@
 
 - (IBAction)popViewController:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)userDidSwipe {
+    [self popViewController:self];
 }
 @end

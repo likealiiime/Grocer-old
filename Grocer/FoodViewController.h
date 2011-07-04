@@ -15,11 +15,12 @@
     FoodName *food;
     NSString *aka;
     NSString *taste;
+    UISwipeGestureRecognizer *swipe;
 }
 
 - (id) initWithFoodName:(FoodName *)newFoodName;
 
 - (NSString *) sqlSelect:(NSString *)select;
 - (IBAction) popViewController:(id)sender;
-
+- (void) userDidSwipe;
 @end

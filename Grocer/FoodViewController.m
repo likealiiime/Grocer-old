@@ -82,6 +82,13 @@
     } else {
         tasteTextView.text = taste;
     }
+    
+    UIImageView *foodImage = (UIImageView *)[self.view viewWithTag:3];
+    UIImage *image = [UIImage imageNamed:food.name];
+    NSLog(@"food.name = \"%@\"", food.name);
+    NSLog(@"image     = %@", image);
+    NSLog(@"image rc  = %i", [image retainCount]);
+    foodImage.image = image;
 }
 
 /*- (void)viewDidUnload {

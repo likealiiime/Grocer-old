@@ -36,6 +36,11 @@
 		A7B5833113A43BE800D72D72 /* FoodViewBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B5832F13A43BE800D72D72 /* FoodViewBackButton@2x.png */; };
 		A7B5833213A43BE800D72D72 /* FoodViewBackButtonTouched@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B5833013A43BE800D72D72 /* FoodViewBackButtonTouched@2x.png */; };
 		A7DD542713C1721A0046A820 /* FoodViewBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7DD542613C1721A0046A820 /* FoodViewBackground@2x.png */; };
+		A7E6E43813C1795800CDADCB /* English Pea.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E43313C1795800CDADCB /* English Pea.png */; };
+		A7E6E43913C1795800CDADCB /* Fava Bean.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E43413C1795800CDADCB /* Fava Bean.png */; };
+		A7E6E43A13C1795800CDADCB /* Snow Pea.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E43513C1795800CDADCB /* Snow Pea.png */; };
+		A7E6E43B13C1795800CDADCB /* String Bean.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E43613C1795800CDADCB /* String Bean.png */; };
+		A7E6E43C13C1795800CDADCB /* Sugar Snap Pea.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E43713C1795800CDADCB /* Sugar Snap Pea.png */; };
 		A7F01EBE1313506B00EB1F22 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F01EBD1313506B00EB1F22 /* UIKit.framework */; };
 		A7F01EC01313506B00EB1F22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F01EBF1313506B00EB1F22 /* Foundation.framework */; };
 		A7F01EC21313506B00EB1F22 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F01EC11313506B00EB1F22 /* CoreGraphics.framework */; };
@@ -85,6 +90,11 @@
 		A7B5832F13A43BE800D72D72 /* FoodViewBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FoodViewBackButton@2x.png"; sourceTree = "<group>"; };
 		A7B5833013A43BE800D72D72 /* FoodViewBackButtonTouched@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FoodViewBackButtonTouched@2x.png"; sourceTree = "<group>"; };
 		A7DD542613C1721A0046A820 /* FoodViewBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FoodViewBackground@2x.png"; sourceTree = "<group>"; };
+		A7E6E43313C1795800CDADCB /* English Pea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "English Pea.png"; sourceTree = "<group>"; };
+		A7E6E43413C1795800CDADCB /* Fava Bean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fava Bean.png"; sourceTree = "<group>"; };
+		A7E6E43513C1795800CDADCB /* Snow Pea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Snow Pea.png"; sourceTree = "<group>"; };
+		A7E6E43613C1795800CDADCB /* String Bean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "String Bean.png"; sourceTree = "<group>"; };
+		A7E6E43713C1795800CDADCB /* Sugar Snap Pea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sugar Snap Pea.png"; sourceTree = "<group>"; };
 		A7F01EB91313506B00EB1F22 /* Grocer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grocer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F01EBD1313506B00EB1F22 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7F01EBF1313506B00EB1F22 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -194,6 +204,26 @@
 			name = "Food View";
 			sourceTree = "<group>";
 		};
+		A7E6E43113C1794200CDADCB /* Vegetables */ = {
+			isa = PBXGroup;
+			children = (
+				A7E6E43213C1794900CDADCB /* Beans */,
+			);
+			name = Vegetables;
+			sourceTree = "<group>";
+		};
+		A7E6E43213C1794900CDADCB /* Beans */ = {
+			isa = PBXGroup;
+			children = (
+				A7E6E43313C1795800CDADCB /* English Pea.png */,
+				A7E6E43413C1795800CDADCB /* Fava Bean.png */,
+				A7E6E43513C1795800CDADCB /* Snow Pea.png */,
+				A7E6E43613C1795800CDADCB /* String Bean.png */,
+				A7E6E43713C1795800CDADCB /* Sugar Snap Pea.png */,
+			);
+			name = Beans;
+			sourceTree = "<group>";
+		};
 		A7F01EAE1313506B00EB1F22 = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +282,7 @@
 		A7F01EDD131350D100EB1F22 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A7E6E43113C1794200CDADCB /* Vegetables */,
 				A79E2BA213B2D46C0061E6F3 /* Search View */,
 				A7B5832E13A43A8800D72D72 /* Food View */,
 				A7351DCA131CA10300885DFE /* List View */,
@@ -343,6 +374,11 @@
 				A79E2BAC13B2FBEA0061E6F3 /* SearchViewTableCellBackground@2x.png in Resources */,
 				A79E2BAE13B2FCD20061E6F3 /* SearchViewTableCellBackgroundHighlight@2x.png in Resources */,
 				A7DD542713C1721A0046A820 /* FoodViewBackground@2x.png in Resources */,
+				A7E6E43813C1795800CDADCB /* English Pea.png in Resources */,
+				A7E6E43913C1795800CDADCB /* Fava Bean.png in Resources */,
+				A7E6E43A13C1795800CDADCB /* Snow Pea.png in Resources */,
+				A7E6E43B13C1795800CDADCB /* String Bean.png in Resources */,
+				A7E6E43C13C1795800CDADCB /* Sugar Snap Pea.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

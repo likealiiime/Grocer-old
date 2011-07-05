@@ -27,6 +27,16 @@
     selectionImage.hidden = NO;
 }
 
+- (IBAction)fadeOutSelectionImage:(id)sender {
+    if (!selectionImage.hidden) {
+        [UIView animateWithDuration:0.25 animations:^{
+            selectionImage.alpha = 0; 
+        } completion:^(BOOL completed) {
+            selectionImage.hidden = YES;
+        }];
+    }
+}
+
 - (IBAction)selectFamily:(id)sender {
     UIButton *button = (UIButton *)sender;
     ListViewController *listViewController = [[ListViewController alloc] initWithFamily:button.titleLabel.text inKingdom:self.kingdom];
@@ -69,13 +79,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    if (!selectionImage.hidden) {
-        [UIView animateWithDuration:0.25 animations:^{
-            selectionImage.alpha = 0; 
-        } completion:^(BOOL completed) {
-            selectionImage.hidden = YES;
-        }];
-    }
+    [self fadeOutSelectionImage:nil];
     [super viewDidAppear:animated];
 }
 

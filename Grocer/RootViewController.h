@@ -14,6 +14,7 @@
     IBOutlet UIImageView *selectionImage;
 }
 
+- (IBAction)fadeOutSelectionImage:(id)sender;
 - (IBAction)showSelectionImage:(id)sender;
 - (IBAction)selectFamily:(id)sender;
 

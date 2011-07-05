@@ -121,7 +121,6 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     UITableView *tableView = (UITableView *)[self.view viewWithTag:1];
     NSIndexPath *path = [tableView indexPathForSelectedRow];
@@ -230,14 +229,14 @@
     
     UILabel *label = [[[UILabel alloc] initWithFrame:CGRectMake(70,10, 250,25)] autorelease];
     label.tag = 1;
-    label.font = [UIFont fontWithName:@"Sketchetik" size:20];
-    label.textColor = [UIColor colorWithWhite:(4.0/16.0) alpha:1];
+    //label.font = [UIFont fontWithName:@"Sketchetik" size:20];
+    label.font = [UIFont fontWithName:@"Helvetica Neue" size: 20];
+    label.textColor = [UIColor colorWithWhite:(6.0/16.0) alpha:1];
     label.backgroundColor = [UIColor clearColor];
     label.opaque = NO;
     label.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
     label.baselineAdjustment = UIBaselineAdjustmentAlignBaselines;
     [cell.contentView addSubview:label];
-    
     return cell;
 }
 

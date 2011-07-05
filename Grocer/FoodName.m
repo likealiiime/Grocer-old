@@ -20,7 +20,9 @@
         _id = theId;
         _generalName = [[NSString alloc] initWithString: rawGeneral];
         _specificName = [[NSString alloc] initWithString: rawSpecific];
-        if (rawSpecific.length == 0) {
+        if (rawGeneral.length == 0 && rawSpecific.length > 0) { // No General Name
+            _name = [_specificName retain];
+        } else if (rawGeneral.length > 0 && rawSpecific.length == 0) { // No Specific Name
             _name = [_generalName retain];
         } else {
             _name = [[NSString alloc] initWithFormat:@"%@ %@", _specificName, _generalName];

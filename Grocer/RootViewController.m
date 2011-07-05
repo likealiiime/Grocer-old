@@ -20,6 +20,13 @@
 @synthesize searchWasActive=_searchWasActive;
 @synthesize savedScopeButtonIndex=_savedScopeButtonIndex;
 
+- (IBAction)showSelectionImage:(id)sender {
+    UIButton *button = (UIButton *)sender;
+    selectionImage.center = button.center;
+    selectionImage.alpha  = 1;
+    selectionImage.hidden = NO;
+}
+
 - (IBAction)selectFamily:(id)sender {
     UIButton *button = (UIButton *)sender;
     ListViewController *listViewController = [[ListViewController alloc] initWithFamily:button.titleLabel.text inKingdom:self.kingdom];
@@ -60,14 +67,19 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
-/*
-- (void)viewDidAppear:(BOOL)animated
-{
+
+- (void)viewDidAppear:(BOOL)animated {
+    if (!selectionImage.hidden) {
+        [UIView animateWithDuration:0.25 animations:^{
+            selectionImage.alpha = 0; 
+        } completion:^(BOOL completed) {
+            selectionImage.hidden = YES;
+        }];
+    }
     [super viewDidAppear:animated];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
+/*- (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
 }
 */
@@ -98,6 +110,8 @@
 
 - (void)viewDidUnload
 {
+    [selectionImage release];
+    selectionImage = nil;
     [super viewDidUnload];
 
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
@@ -107,6 +121,7 @@
 - (void)dealloc
 {
     [_filteredNames release];
+    [selectionImage release];
     [super dealloc];
 }
 
@@ -192,8 +207,8 @@
     
     UILabel *label = [[[UILabel alloc] initWithFrame:CGRectMake(70,10, 250,25)] autorelease];
     label.tag = 1;
-    label.font = [UIFont fontWithName:@"Sketchetik" size:20];
-    label.textColor = [UIColor colorWithWhite:(4.0/16.0) alpha:1];
+    label.font = [UIFont fontWithName:@"Helvetica Neue" size:20];
+    label.textColor = [UIColor colorWithWhite:(6.0/16.0) alpha:1];
     label.backgroundColor = [UIColor clearColor];
     label.opaque = NO;
     label.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;

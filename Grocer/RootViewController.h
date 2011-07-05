@@ -11,8 +11,10 @@
 
 @interface RootViewController : UIViewController<UISearchDisplayDelegate> {
     FMDatabase *db;
+    IBOutlet UIImageView *selectionImage;
 }
 
+- (IBAction)showSelectionImage:(id)sender;
 - (IBAction)selectFamily:(id)sender;
 
 - (NSString *) sqlSearch:(NSString *)select query:(NSString *)query;

@@ -41,6 +41,7 @@
 		A7E6E43A13C1795800CDADCB /* Snow Pea.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E43513C1795800CDADCB /* Snow Pea.png */; };
 		A7E6E43B13C1795800CDADCB /* String Bean.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E43613C1795800CDADCB /* String Bean.png */; };
 		A7E6E43C13C1795800CDADCB /* Sugar Snap Pea.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E43713C1795800CDADCB /* Sugar Snap Pea.png */; };
+		A7E6E44E13C2963D00CDADCB /* RootViewSelection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E44D13C2963D00CDADCB /* RootViewSelection@2x.png */; };
 		A7F01EBE1313506B00EB1F22 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F01EBD1313506B00EB1F22 /* UIKit.framework */; };
 		A7F01EC01313506B00EB1F22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F01EBF1313506B00EB1F22 /* Foundation.framework */; };
 		A7F01EC21313506B00EB1F22 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F01EC11313506B00EB1F22 /* CoreGraphics.framework */; };
@@ -95,6 +96,7 @@
 		A7E6E43513C1795800CDADCB /* Snow Pea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Snow Pea.png"; sourceTree = "<group>"; };
 		A7E6E43613C1795800CDADCB /* String Bean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "String Bean.png"; sourceTree = "<group>"; };
 		A7E6E43713C1795800CDADCB /* Sugar Snap Pea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sugar Snap Pea.png"; sourceTree = "<group>"; };
+		A7E6E44D13C2963D00CDADCB /* RootViewSelection@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RootViewSelection@2x.png"; sourceTree = "<group>"; };
 		A7F01EB91313506B00EB1F22 /* Grocer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grocer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F01EBD1313506B00EB1F22 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7F01EBF1313506B00EB1F22 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -294,6 +296,7 @@
 		A7F01EDE131350D600EB1F22 /* Root View */ = {
 			isa = PBXGroup;
 			children = (
+				A7E6E44D13C2963D00CDADCB /* RootViewSelection@2x.png */,
 				A7351DBE131B473800885DFE /* Vegetables Root View@2x.png */,
 				A7351D521313584F00885DFE /* Root View Background@2x.png */,
 				A7351D4E1313584600885DFE /* Fruits Root View@2x.png */,
@@ -379,6 +382,7 @@
 				A7E6E43A13C1795800CDADCB /* Snow Pea.png in Resources */,
 				A7E6E43B13C1795800CDADCB /* String Bean.png in Resources */,
 				A7E6E43C13C1795800CDADCB /* Sugar Snap Pea.png in Resources */,
+				A7E6E44E13C2963D00CDADCB /* RootViewSelection@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

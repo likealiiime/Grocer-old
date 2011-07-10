@@ -174,10 +174,10 @@
 			isa = PBXGroup;
 			children = (
 				A7351DD5131CA2EC00885DFE /* CustomNavigationBar.h */,
-				A7351DD6131CA2F200885DFE /* CustomNavigationBar.m */,
 				A7F01ECC1313506C00EB1F22 /* GrocerAppDelegate.h */,
 				A7F01ECD1313506C00EB1F22 /* GrocerAppDelegate.m */,
 				A7F01ED21313506D00EB1F22 /* RootViewController.h */,
+				A7351DD6131CA2F200885DFE /* CustomNavigationBar.m */,
 				A7F01ED31313506D00EB1F22 /* RootViewController.m */,
 				A7351D5613135FE700885DFE /* ListViewController.h */,
 				A7351D5713135FE700885DFE /* ListViewController.m */,
@@ -261,6 +261,7 @@
 		A7E6E43113C1794200CDADCB /* Vegetables */ = {
 			isa = PBXGroup;
 			children = (
+				A7E9122713CA5834000E3160 /* New Group */,
 				A7E6E43213C1794900CDADCB /* Beans */,
 				A763C93E13C2CE6A000797C4 /* Bulbs */,
 				A763C95213C5670C000797C4 /* Gourds */,
@@ -278,6 +279,13 @@
 				A7E6E43713C1795800CDADCB /* Sugar Snap Pea.png */,
 			);
 			name = Beans;
+			sourceTree = "<group>";
+		};
+		A7E9122713CA5834000E3160 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		A7F01EAE1313506B00EB1F22 = {

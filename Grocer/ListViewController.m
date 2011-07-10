@@ -206,7 +206,9 @@
 
 - (void)configureNormalCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     //NSLog(@"%d - %@", indexPath.row, ((FoodName *)[names objectAtIndex:indexPath.row]).name);
-    [(UILabel *)[cell viewWithTag:1] setText:((FoodName *)[names objectAtIndex:indexPath.row]).name];
+    FoodName *food = (FoodName *)[names objectAtIndex:indexPath.row];
+    [(UILabel *)[cell viewWithTag:1] setText:food.name];
+    //[(UIImageView *)[cell viewWithTag:2] setImage:[UIImage imageNamed:food.name]];
 }
 
 - (void)configureSearchDisplayCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
@@ -227,7 +229,7 @@
     cell.selectedBackgroundView = highlight;
     [highlight release];
     
-    UILabel *label = [[[UILabel alloc] initWithFrame:CGRectMake(70,10, 250,25)] autorelease];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(70,10, 250,25)];
     label.tag = 1;
     //label.font = [UIFont fontWithName:@"Sketchetik" size:20];
     label.font = [UIFont fontWithName:@"Helvetica Neue" size: 20];
@@ -237,6 +239,14 @@
     label.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
     label.baselineAdjustment = UIBaselineAdjustmentAlignBaselines;
     [cell.contentView addSubview:label];
+    [label release];
+    
+    /*UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(0,0, 56, 42)];
+    image.tag = 2;
+    image.opaque = NO;
+    [cell.contentView addSubview:image];
+    [image release];*/
+    
     return cell;
 }
 

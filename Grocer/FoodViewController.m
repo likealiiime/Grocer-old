@@ -76,8 +76,8 @@
     UILabel *label = (UILabel *)[self.view viewWithTag:1];
     label.text = food.name;
     label.textColor = [UIColor colorWithWhite:0.15 alpha:1];
-    //label.shadowColor = [UIColor colorWithWhite:0.72 alpha:1];
-    //label.shadowOffset = CGSizeMake(0, 1);
+    label.shadowColor = [UIColor colorWithWhite:1 alpha:0.3];
+    label.shadowOffset = CGSizeMake(0, 1);
     label.font = [UIFont fontWithName:@"MoanHand" size:45];
     
     UITextView *tasteTextView = (UITextView *)[self.view viewWithTag:2];

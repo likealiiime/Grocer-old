@@ -68,6 +68,10 @@
 		A7E9123C13CA58E4000E3160 /* Sage.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E9123113CA58E4000E3160 /* Sage.png */; };
 		A7E9123D13CA58E4000E3160 /* Spearmint.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E9123213CA58E4000E3160 /* Spearmint.png */; };
 		A7E9123E13CA58E4000E3160 /* Thyme.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E9123313CA58E4000E3160 /* Thyme.png */; };
+		A7E9124013CA5D25000E3160 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E9123F13CA5D25000E3160 /* Default@2x.png */; };
+		A7E9124213CA5DD1000E3160 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E9124113CA5DD1000E3160 /* Default.png */; };
+		A7E9124A13CA673B000E3160 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E9124813CA673B000E3160 /* Icon.png */; };
+		A7E9124B13CA673B000E3160 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E9124913CA673B000E3160 /* Icon@2x.png */; };
 		A7F01EBE1313506B00EB1F22 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F01EBD1313506B00EB1F22 /* UIKit.framework */; };
 		A7F01EC01313506B00EB1F22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F01EBF1313506B00EB1F22 /* Foundation.framework */; };
 		A7F01EC21313506B00EB1F22 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F01EC11313506B00EB1F22 /* CoreGraphics.framework */; };
@@ -149,6 +153,10 @@
 		A7E9123113CA58E4000E3160 /* Sage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sage.png; sourceTree = "<group>"; };
 		A7E9123213CA58E4000E3160 /* Spearmint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spearmint.png; sourceTree = "<group>"; };
 		A7E9123313CA58E4000E3160 /* Thyme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Thyme.png; sourceTree = "<group>"; };
+		A7E9123F13CA5D25000E3160 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A7E9124113CA5DD1000E3160 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A7E9124813CA673B000E3160 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		A7E9124913CA673B000E3160 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		A7F01EB91313506B00EB1F22 /* Grocer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grocer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F01EBD1313506B00EB1F22 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7F01EBF1313506B00EB1F22 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -196,10 +204,10 @@
 			isa = PBXGroup;
 			children = (
 				A7351DD5131CA2EC00885DFE /* CustomNavigationBar.h */,
+				A7351DD6131CA2F200885DFE /* CustomNavigationBar.m */,
 				A7F01ECC1313506C00EB1F22 /* GrocerAppDelegate.h */,
 				A7F01ECD1313506C00EB1F22 /* GrocerAppDelegate.m */,
 				A7F01ED21313506D00EB1F22 /* RootViewController.h */,
-				A7351DD6131CA2F200885DFE /* CustomNavigationBar.m */,
 				A7F01ED31313506D00EB1F22 /* RootViewController.m */,
 				A7351D5613135FE700885DFE /* ListViewController.h */,
 				A7351D5713135FE700885DFE /* ListViewController.m */,
@@ -321,6 +329,17 @@
 			name = Herbs;
 			sourceTree = "<group>";
 		};
+		A7E9124713CA6471000E3160 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A7E9124813CA673B000E3160 /* Icon.png */,
+				A7E9124913CA673B000E3160 /* Icon@2x.png */,
+				A7E9124113CA5DD1000E3160 /* Default.png */,
+				A7E9123F13CA5D25000E3160 /* Default@2x.png */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
 		A7F01EAE1313506B00EB1F22 = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +398,7 @@
 		A7F01EDD131350D100EB1F22 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A7E9124713CA6471000E3160 /* App */,
 				A7E6E43113C1794200CDADCB /* Vegetables */,
 				A7B5832E13A43A8800D72D72 /* Food View */,
 				A7351DCA131CA10300885DFE /* List View */,
@@ -503,6 +523,10 @@
 				A7E9123C13CA58E4000E3160 /* Sage.png in Resources */,
 				A7E9123D13CA58E4000E3160 /* Spearmint.png in Resources */,
 				A7E9123E13CA58E4000E3160 /* Thyme.png in Resources */,
+				A7E9124013CA5D25000E3160 /* Default@2x.png in Resources */,
+				A7E9124213CA5DD1000E3160 /* Default.png in Resources */,
+				A7E9124A13CA673B000E3160 /* Icon.png in Resources */,
+				A7E9124B13CA673B000E3160 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
